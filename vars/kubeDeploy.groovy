@@ -1,5 +1,5 @@
 def call() {
-    withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
+    withKubeConfig(credentialsId: 'k8s') {
         sh "kubectl apply -f deployment.yml"
     }
 }
